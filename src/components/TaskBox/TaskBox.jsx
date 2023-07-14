@@ -7,9 +7,11 @@ function TaskBox({ value,type, setTasks, id }) {
 
     const handleMove =()=>{
         setTasks(currVal=>{
+            const copy = [...currVal]
             const index = currVal.findIndex(task => task.id === id);
-            currVal[index].type = TaskType['PROGRESS']
-            return currVal
+            copy[index].type = TaskType['PROGRESS']
+        
+            return copy
         })
     }
 

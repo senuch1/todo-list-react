@@ -25,6 +25,7 @@ function TasksGridItem({ name,tasks,type, setTasks }) {
                             type={task.type}
                             key={task.id}
                             value={task.value}
+                            id ={task.id}
                         />
                     )
                 })}
